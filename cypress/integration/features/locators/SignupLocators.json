@@ -1,0 +1,11 @@
+{
+
+  "Signupbutton" : "a:contains(\"Sign Up\")",
+  "Fullname" : ":nth-child(1) > .loginchange",
+  "Username" : ":nth-child(2) > .loginchange",
+  "userEmail" : "#inputEmail",
+  "password" : "#pass_log_id",
+  "Checkbox" : ".pollCheckmark",
+  "btnLogin" : ".auth--btn"
+
+}

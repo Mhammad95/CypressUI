@@ -1,0 +1,36 @@
+{
+   
+    "postList": ".post--content",                   
+    "postsomethig": ".textarea",
+    "postTextarea": ".custom_textarea_container",
+    "postPublishButton": "button[type='button']",
+    "postOptionMenuButton": "a.icon_more",
+    "postDeleteButton": "//div[normalize-space()='Delete Post']",
+    "postDelConfirmButton": "//button[normalize-space()='Confirm']",
+    "postDelAlert":"//div[@class='Vue-Toastification__toast-body']",
+
+
+    "marqueeSlider":".slide",
+    "profileCard":"//div[@class='card card--profile']",
+    "investmentCard": ".card",
+    "nftCard": ".card-body",
+    "widgetsScroller": "//div[@class='cards_section view_cards hover_scrollable']",
+
+    "addWidgetButton": "(//div[@class='sort_filter_icon'])[1]",
+    "selectWidgetType": "(//div[@class='widget_content'])[2]",
+    "selectScreenerButton": "(//div[@class='widget--tile'])[1]",
+    "selectedWidget": "//div[@class='widget--tile active']//p",
+    "nextButton": "(//button[normalize-space()='Next'])[1]",
+    "gridLayout":"(//div[@class='image_wrapper'])[2]",
+    "stockList":"(//div[@class='trendingimgsec'])[1]",
+    "submitWidgetButton":"//button[normalize-space()='Submit']",
+    "newWidgetVisiblity": "//div[@class='card-body h-100']",
+    "widgetOptionMenuButton":"//a[@class='p-relative icon_more configure']",
+    "widgetDeleteButton":"//div[normalize-space()='Delete Widget']",
+    "widgetDelConfirmButton": "//button[normalize-space()='Confirm']",
+
+
+    "signupbutton": ".data-v-1527a92b"
+
+    
+}

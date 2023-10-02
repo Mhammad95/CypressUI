@@ -1,0 +1,29 @@
+{
+    "testPostText": "Welcome to Traderverse",
+    "postDelAlertText":"Post Deleted Successfully.",
+    "dashboardPageLoadTimeError": "Page: Dashboard \nError Message: Dashboard page must be laod within two seconds and must show posts list\nLocator: .post--content",
+    "createPostPopupError": "Page: Dashboard \nError Message: Post Something, text area must be visible and clickable\nLocator: .textarea",
+    "enterPostTextError": "Page: Dashboard \nError Message: User must be able to write text in text area on create post popup\nLocator: .custom_textarea_container",
+    "postPublishError": "Page: Dashboard \nError Message: Post publish button must be clickable and must publish the post\nLocator: button[type='button']",
+    "postOptionMenuError": "Page: Dashboard \nError Message: Post option menu button must be visible and clickable\nLocator: a.icon_more",
+    "postDeleteError": "Page: Dashboard \nError Message: Delete post button must be visible and clickable\nLocator: //div[normalize-space()='Delete Post']",
+    "postDelConfirmationError": "Page: Dashboard \nError Message: Delete post confirm button must be visible and clickable\nLocator: //button[normalize-space()='Confirm']",
+
+    "marqueeSliderError": "Page: Dashboard \nError Message: Marquee slider in widgets area on dashboard must be visible\nLocator: .slide",
+    "profileCardError": "Page: Dashboard \nError Message: Profile card must be visible in widget area\nLocator: //div[@class='card card--profile']",
+    "investmentCardError": "Page: Dashboard \nError Message: Investment card must be visible in widget area\nLocator: .card",
+    "nftCardError": "Page: Dashboard \nError Message: NFT card must be visible in widget area\nLocator: //div[@class='card card--nft']",
+    "widgetsScrollerError": "Page: Dashboard \nError Message: Scroll must work in the widget area\nLocator: //div[@class='cards_section view_cards hover_scrollable']",
+
+    "addWidgetError": "Page: Dashboard \nError Message: Add widget button must be visible and clickable\nLocator: (//div[@class='sort_filter_icon'])[1]",
+    "selectWidgetTypeError": "Page: Dashboard \nError Message: Widget type must be visible and clickable on widget manager popup\nLocator: (//div[@class='widget_content'])[2]",
+    "selectScreenerError": "Page: Dashboard \nError Message: Gainer Screener must visible and clickable on widget manager popup\nLocator: (//div[@class='widget--tile'])[1]",
+    "nextButtonError": "Page: Dashboard \nError Message: Next button after selection of screener must be visible and clickable on widget manager popup\nLocator: (//button[normalize-space()='Next'])[1]",
+    "stockListError": "Page: Dashboard \nError Message: Stock list must be visible on widget manager popup\nLocator: (//div[@class='trendingimgsec'])[1]",
+    "submitWidgetError": "Page: Dashboard \nError Message: Submit button must be visible and clickable on widget manager popup\nLocator: //button[normalize-space()='Submit']",
+    "widgetOptionMenuError": "Page: Dashboard \nError Message: Card widget option menu button must be visible and clickable in widget area\nLocator: //a[@class='p-relative icon_more configure']",
+    "widgetDeleteError": "Page: Dashboard \nError Message: Widget card delete button must be visible and clickable\nLocator: //div[normalize-space()='Delete Widget']",
+    "widgetDelConfirmError": "Page: Dashboard \nError Message: Widget delete confirmation button must be visible and clickable\nLocator: //button[normalize-space()='Confirm']",
+
+    "pageLink":"https://social-dev.traderverse.io/private/feed"
+}

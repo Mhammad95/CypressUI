@@ -1,0 +1,6 @@
+{
+    "userEmail" : "#inputEmail",
+    "password" : "#pass_log_id",
+    "btnLogin" : "button[type='submit']"
+
+}
