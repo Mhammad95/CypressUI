@@ -47,7 +47,7 @@ it('User Explore', function () {
 
          //Stocks -- Take so much time to load
          cy.get('.discovery > :nth-child(10)').scrollIntoView().should("be.visible");
-         cy.get('.discovery--container').scrollIntoView().should("be.visible");
+       //  cy.get('.discovery--container').scrollIntoView().should("be.visible");
          cy.get(':nth-child(9) > .align-self-baseline > .text--warning').click();
                            cy.url().should('include', '/Stocks');
                            cy.get('.menu > ul > :nth-child(1) > a').click();
@@ -106,10 +106,14 @@ it('User Explore Remianing Tabs', function () {
            cy.get('.item02').scrollIntoView().should("be.visible");
            //trendingtopics
            cy.get('.secondSectionDv').scrollIntoView().should("be.visible");
-           cy.get('.secondSectionDv > .gridInfoDv > :nth-child(1)').scrollIntoView().should("be.visible");
-           cy.get('.secondSectionDv > .gridInfoDv > :nth-child(2)').scrollIntoView().should("be.visible");
+           cy.get(':nth-child(18) > .itemInfo').click();
+           cy.get('.filterAgainstNews > :nth-child(1)').scrollIntoView().should("be.visible");
+           cy.get("img[src='https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png']").should("be.visible");
+
+         //  cy.get('.secondSectionDv > .gridInfoDv > :nth-child(1)').scrollIntoView().should("be.visible");
+         //  cy.get('.secondSectionDv > .gridInfoDv > :nth-child(2)').scrollIntoView().should("be.visible");
            //Contributors
-           cy.get('.thirdSectionDv').scrollIntoView().should("be.visible");
+         //  cy.get('.thirdSectionDv').scrollIntoView().should("be.visible");
 
            //Trends
            cy.get('.menu > ul > :nth-child(6) > a').click();

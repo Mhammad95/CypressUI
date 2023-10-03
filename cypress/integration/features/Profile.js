@@ -44,7 +44,9 @@ it('User Profile', function () {
          //exchanges row
          cy.get('.profileAbout > .card-body > :nth-child(2)').scrollIntoView().should("be.visible");
          //wallet row
-  //       cy.get(':nth-child(3) > .accounts_row').scrollIntoView().should("be.visible");
+        cy.get(':nth-child(3) > .accounts_row').scrollIntoView().should("be.visible");
+
+
          //custom
   //       cy.get('.profileAbout > .card-body > :nth-child(6)').scrollIntoView().should("be.visible");
          //purchased

@@ -35,8 +35,10 @@ it('User Analyze', function () {
          cy.wait(600);
      //    cy.get(':nth-child(1) > .accordion__item__body > :nth-child(1)').click();
          cy.get(':nth-child(2) > .watchlist__card > .watchlist__card--head > .btn').click();
+         cy.wait(600);
+         cy.get(':nth-child(1) > .search > .change').click();
          cy.get('.modal--header > .search > .change').type('aapl').type('{enter}');
-         cy.get(':nth-child(1) > .custom_checkbox').click();
+         cy.get(':nth-child(2) > .custom_checkbox').click();
          cy.get('.primary').click();
 
          cy.get("img[src='https://cdn-images.traderverse.io/stocks/AAPL_NASDAQ.png']").should("be.visible");
@@ -73,7 +75,18 @@ it('User Analyze', function () {
           cy.get(':nth-child(1) > .card--chart--detail > .chart_view').should("be.visible");
           cy.get("img[src='https://cdn-images.traderverse.io/stocks/OXY_XNYS.png']").should("be.visible");
           cy.get ('.headingChartDv > .btn').click();
-          cy.get('.change').type('aapl')
+          cy.get('.modal--header > .search > .change').type('aapl').type('{enter}');
+          cy.wait(9000);
+          cy.get(':nth-child(1) > .custom_checkbox').click();
+          cy.wait(6000);
+          cy.get('.primary').click();
+          cy.wait(10000);
+          cy.get(':nth-child(4) > .card--chart--detail > .chart_view > .new_chart_container').should("be.visible");
+          cy.get(':nth-child(4) > .card--chart--detail > .chart_view > .p-relative > .svg_icon > svg').click();
+          cy.get(':nth-child(4) > .card--chart--detail > .chart_view > .p-relative > .popover_content > :nth-child(2)').click();
+          cy.get('.loginbtn > .btn').click();
+
+
           cy.wait(3000);
           //Paper
           cy.get(':nth-child(9) > a').click();

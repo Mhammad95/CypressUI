@@ -29,6 +29,9 @@ module.exports = defineConfig({
   fixturesFolder: 'cypress/fixture',
   viewportWidth: 1200,
   viewportHeight: 800,
+  screenshotOnRunFailure: true,
+
+
 
   e2e: {
     experimentalRunAllSpecs: true,
