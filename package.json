@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "Tests-CI": "cypress run --record --key 8bb222f6-55c1-40ae-a555-78325932b748"
   },
-  "author": "M.Bari",
+  "author": "M.Hammad",
   "license": "ISC",
   "devDependencies": {
     "@alfonso-presa/soft-assert": "^0.6.0",
@@ -23,6 +23,8 @@
     "cypress-soft-assertions": "^1.1.0",
     "cypress-time-marks": "^1.4.0",
     "D": "^1.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
     "node-fetch": "^2.6.11"
   }
 }

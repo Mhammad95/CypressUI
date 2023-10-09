@@ -10,7 +10,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 Cypress.Commands.add('Login', () => {
 
-    cy.visit('https://social-internal.traderverse.io/login')
+    cy.visit('https://social-stage.traderverse.io/login')
     cy.get(loginLocators.userEmail).type(loginData.useremail)
     cy.get(loginLocators.password).type(loginData.password)
     cy.get(loginLocators.btnLogin).click({ force: true }).timeMark('visit')

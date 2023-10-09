@@ -25,5 +25,5 @@
     "widgetDeleteError": "Page: Dashboard \nError Message: Widget card delete button must be visible and clickable\nLocator: //div[normalize-space()='Delete Widget']",
     "widgetDelConfirmError": "Page: Dashboard \nError Message: Widget delete confirmation button must be visible and clickable\nLocator: //button[normalize-space()='Confirm']",
 
-    "pageLink":"https://social-internal.traderverse.io/private/feed"
+    "pageLink":"https://social-stage.traderverse.io/private/feed"
 }

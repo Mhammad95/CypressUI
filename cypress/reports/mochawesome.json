@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-09T16:53:54.380Z",
+    "end": "2023-10-09T16:54:22.556Z",
+    "duration": 28176,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3e969eab-0257-40ce-87f8-e05e786fd241",
+      "title": "",
+      "fullFile": "cypress/integration/features/Profile.js",
+      "file": "cypress/integration/features/Profile.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "09cf342b-0959-4723-a758-0568aa534abf",
+          "title": "Tradverse User Profiles",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User Profile",
+              "fullTitle": "Tradverse User Profiles User Profile",
+              "timedOut": null,
+              "duration": 27990,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#Layer_hamburger').click();\ncy.wait(2000);\ncy.get('.m-b-10').click();\ncy.get('.custom--container--sidebar > .card > .card-body').should(\"be.visible\");\ncy.get('.profileAbout > :nth-child(1)').should(\"be.visible\");\ncy.wait(4000);\ncy.get('.menu > ul > :nth-child(2) > a').click();\ncy.get('.coming_soon_container > h6').should(\"be.visible\");\ncy.wait(5000); //Connections\ncy.get('.menu > ul > :nth-child(4) > a').click();\ncy.get('.flex_container').should(\"be.visible\"); //Assets\ncy.get('.menu--container > .menu > ul > :nth-child(5) > a').click();\ncy.get('.coming_soon_container > h6').should(\"be.visible\"); //Investment\ncy.get('.menu--container > .menu > ul > :nth-child(6) > a').click();\ncy.get('.coming_soon_container > h6').should(\"be.visible\"); //Accounts\ncy.get('.menu > ul > :nth-child(7) > a').click();\ncy.get('.profileAbout > .card-body > :nth-child(1)').should(\"be.visible\"); //exchanges row\ncy.get('.profileAbout > .card-body > :nth-child(2)').scrollIntoView().should(\"be.visible\"); //wallet row\ncy.get(':nth-child(3) > .accounts_row').scrollIntoView().should(\"be.visible\"); //custom\n//       cy.get('.profileAbout > .card-body > :nth-child(6)').scrollIntoView().should(\"be.visible\");\n//purchased\n//      cy.get('.profileAbout > .card-body > :nth-child(7)').scrollIntoView().should(\"be.visible\");\n//Feed\n//          cy.get('.menu > ul > :nth-child(3) > a').click();\n//        cy.get('#Layer_hamburger').click();\n//      cy.wait(3000);\n//    cy.get('.card-body container-post-widgets').should(\"be.visible\");",
+              "err": {},
+              "uuid": "db5c37e7-992c-48c4-9f2d-72ab9d093809",
+              "parentUUID": "09cf342b-0959-4723-a758-0568aa534abf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db5c37e7-992c-48c4-9f2d-72ab9d093809"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27990,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

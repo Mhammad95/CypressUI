@@ -38,14 +38,27 @@ module.exports = defineConfig({
     // setupNodeEvents(on, config) {
     //     return require('.cypress/plugins/index.js')(on, config)
     // },
-    baseUrl: "https://social-internal.traderverse.io/login",
+    baseUrl: "https://social-stage.traderverse.io/login",
 
     specPattern: "cypress/integration/features/*.cy.{js,jsx,ts,tsx}",
     supportFile: 'cypress/support/commands.js',
-    testIsolation: false
+    testIsolation: false,
     // retries: {
     //   "runMode": 2,
     //   "openMode": 0
     // }
+    reporter: 'mochawesome',
+    reporterOptions: {
+          "reportDir": "cypress/reports",
+          "overwrite": false,
+          "html": true,
+          "json": true
+  //  reportDir: 'cypress/reports', // Specify the directory where reports will be saved
+  //  overwrite: false, // Set to true to overwrite previous reports
+  //  html: true, // Set to true to generate an HTML report
+  //  json: true // Set to true to generate a JSON report (used for merging)
+}
+
+
   },
 })
