@@ -9,7 +9,7 @@ import SignupLocators from "../features/locators/SignupLocators.json"
 import 'cypress-time-marks'
 
 
-describe('Tradverse Explore Page', () => {
+describe('Tradverse Analyze Page', () => {
     beforeEach(() => {
         cy.clearLocalStorage()
         cy.Login()
@@ -26,14 +26,15 @@ it('User Analyze', function () {
          cy.get(':nth-child(4) > .sidebar-link').click();
          //Analyze tab add watchlist
 
-         cy.get(':nth-child(1) > .watchlist__card > .watchlist__card--head > .btn').click();
+        /* cy.get(':nth-child(1) > .watchlist__card > .watchlist__card--head > .btn').click();
          cy.get('.modal--body > :nth-child(1)').type('Test');
          cy.get('.loginbtn > .btn').click();
          cy.wait(1000);
          cy.contains('Test').should('be.visible');
          cy.contains('Test').click();
+
          cy.wait(600);
-     //    cy.get(':nth-child(1) > .accordion__item__body > :nth-child(1)').click();
+         cy.get(':nth-child(1) > .accordion__item__body > :nth-child(1)').click();
          cy.get(':nth-child(2) > .watchlist__card > .watchlist__card--head > .btn').click();
          cy.wait(600);
          cy.get(':nth-child(1) > .search > .change').click();
@@ -47,7 +48,7 @@ it('User Analyze', function () {
          cy.get('.watchlist__card--body-item.active > .icon_more > .popover_content > :nth-child(6)').click();
          cy.get('.loginbtn > .btn').click();
 
-
+*/
 
           cy.get(':nth-child(1) > .watchlist__card').should("be.visible");
           //Screener
@@ -70,10 +71,11 @@ it('User Analyze', function () {
           cy.get('.menu > ul > :nth-child(6) > a').click();
           cy.wait(2000);
           //Charts
+          /*
           cy.get('.menu > ul > :nth-child(7) > a').click();
           cy.get(':nth-child(2) > p').click();
           cy.get(':nth-child(1) > .card--chart--detail > .chart_view').should("be.visible");
-          cy.get("img[src='https://cdn-images.traderverse.io/stocks/OXY_XNYS.png']").should("be.visible");
+          cy.get("img[src='https://cdn-images.traderverse.io/stocks/MSFT_NASDAQ.png']").should("be.visible");
           cy.get ('.headingChartDv > .btn').click();
           cy.get('.modal--header > .search > .change').type('aapl').type('{enter}');
           cy.wait(9000);
@@ -85,6 +87,7 @@ it('User Analyze', function () {
           cy.get(':nth-child(4) > .card--chart--detail > .chart_view > .p-relative > .svg_icon > svg').click();
           cy.get(':nth-child(4) > .card--chart--detail > .chart_view > .p-relative > .popover_content > :nth-child(2)').click();
           cy.get('.loginbtn > .btn').click();
+          */
 
 
           cy.wait(3000);

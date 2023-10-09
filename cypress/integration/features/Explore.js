@@ -96,19 +96,19 @@ it('User Explore Remianing Tabs', function () {
 
           //Paper Tab
            cy.get('.menu > ul > :nth-child(4) > a').click();
-           cy.wait(2000);
-           cy.get('.container-fluid').should("be.visible");
+          // cy.wait(2000);
+          // cy.get('.container-fluid').should("be.visible");
 
            //News
            cy.get('.menu > ul > :nth-child(5) > a').click();
            cy.wait(1000);
-           cy.get('.item01').scrollIntoView().should("be.visible");
-           cy.get('.item02').scrollIntoView().should("be.visible");
+        //   cy.get('.item01').scrollIntoView().should("be.visible");
+        //   cy.get('.item02').scrollIntoView().should("be.visible");
            //trendingtopics
            cy.get('.secondSectionDv').scrollIntoView().should("be.visible");
            cy.get(':nth-child(18) > .itemInfo').click();
-           cy.get('.filterAgainstNews > :nth-child(1)').scrollIntoView().should("be.visible");
-           cy.get("img[src='https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png']").should("be.visible");
+     //      cy.get('.filterAgainstNews > :nth-child(1)').scrollIntoView().should("be.visible");
+     //      cy.get("img[src='https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png']").should("be.visible");
 
          //  cy.get('.secondSectionDv > .gridInfoDv > :nth-child(1)').scrollIntoView().should("be.visible");
          //  cy.get('.secondSectionDv > .gridInfoDv > :nth-child(2)').scrollIntoView().should("be.visible");

@@ -15,7 +15,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
 
-  projectId: "i1pa1j",
+  projectId: "7kxbjp",
   video: false,
   screenshotOnRunFailure: true,
   chromeWebSecurity: false,
@@ -38,11 +38,25 @@ module.exports = defineConfig({
     // setupNodeEvents(on, config) {
     //     return require('.cypress/plugins/index.js')(on, config)
     // },
-    baseUrl: "https://social-internal.traderverse.io/login",
+    baseUrl: "https://social-dev.traderverse.io/login",
 
     specPattern: "cypress/integration/features/*.cy.{js,jsx,ts,tsx}",
     supportFile: 'cypress/support/commands.js',
-    testIsolation: false
+    testIsolation: false,
+
+
+    // Add reporter and reporterOptions here
+    reporter: 'mochawesome',
+    reporterOptions: {
+          "reportDir": "cypress/reports/merged",
+          "overwrite": false,
+          "html": true,
+          "json": true
+  //  reportDir: 'cypress/reports', // Specify the directory where reports will be saved
+  //  overwrite: false, // Set to true to overwrite previous reports
+  //  html: true, // Set to true to generate an HTML report
+  //  json: true // Set to true to generate a JSON report (used for merging)
+}
     // retries: {
     //   "runMode": 2,
     //   "openMode": 0

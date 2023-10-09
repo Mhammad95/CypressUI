@@ -73,7 +73,9 @@ describe('Tradverse dashboard', () => {
         // Select grid layout
         cy.wait('@stockList')
         cy.xpath(dashboardLocators.stockList).should("be.visible")
-        cy.xpath(dashboardLocators.gridLayout).click()
+        cy.xpath(dashboardLocators.gridLayout).click();
+        cy.get(dashboardLocator.selectWidgetchart).click();
+        cy.xpath(dashboardLocator.slectnextwidgetpage).click();
         cy.xpath(dashboardLocators.submitWidgetButton).click()
 
         // New widget visibility

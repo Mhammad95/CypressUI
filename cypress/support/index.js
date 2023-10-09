@@ -62,6 +62,7 @@ const createCustomErrorMessage = (error, runnableObj, customErrorMsg, pageLink) 
     return messageArr.join('\n')
 }
 
+
 Cypress.on('fail', (err, runnable) => {
 
     let customErrorMsg;
