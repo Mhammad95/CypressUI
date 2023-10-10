@@ -49,7 +49,7 @@ module.exports = defineConfig({
     reporter: 'mochawesome',
     reporterOptions: {
           "reportDir": "cypress/reports/merged",
-          "overwrite": false,
+          "overwrite": true,
           "html": true,
           "json": true
   //  reportDir: 'cypress/reports', // Specify the directory where reports will be saved
