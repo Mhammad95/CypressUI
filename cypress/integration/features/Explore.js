@@ -228,7 +228,6 @@ it('Create and Delete Post on Dashboard', function () {
        // cy.xpath(dashboardLocators.profileCard).should("be.visible")
         cy.xpath(dashboardLocators.widgetsScroller).scrollTo("bottom")
         cy.get(dashboardLocators.investmentCard).should("be.visible")
-        cy.log();
      //   cy.xpath(dashboardLocators.nftCard).should("be.visible")
 
         // Add new widget
