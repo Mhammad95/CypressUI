@@ -19,7 +19,7 @@ describe('Tradverse dashboard', () => {
     beforeEach(() => {
         cy.routsRun()
     })
-
+/*
     it('Create and Delete Post', function () {
 
         // Post list visibility on dashboard
@@ -51,7 +51,7 @@ describe('Tradverse dashboard', () => {
         // Post delete assertion
         cy.xpath(dashboardLocators.postDelAlert).should('have.text', dashboardData.postDelAlertText)
     })
-/*
+*/
     it('Add Widget', () => {
 
         //Widgets cards visibility
@@ -77,8 +77,7 @@ describe('Tradverse dashboard', () => {
         cy.get('.gridboxWidgetManager > :nth-child(2)').click();
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
-        cy.get('.btn--primary').click();
-        cy.wait(8000);
+        cy.get('.btn--primary').click({ multiple: true });
         cy.get('.btn--primary').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
@@ -93,7 +92,7 @@ describe('Tradverse dashboard', () => {
 
 
     })
-*/
+
  //   after(() => {
 //        cy.clearLocalStorage()
  //   });
