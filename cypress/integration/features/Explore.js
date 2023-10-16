@@ -6,6 +6,7 @@ import errorsData from "../features/fixtures/errorsData.json"
 import loginData from "../features/fixtures/loginData.json"
 import SignupData from "../features/fixtures/SignupData.json"
 import SignupLocators from "../features/locators/SignupLocators.json"
+import dashboardData from "../features/fixtures/dashboardData.json"
 import 'cypress-time-marks'
 
 
