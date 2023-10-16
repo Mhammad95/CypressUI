@@ -261,7 +261,7 @@ it('Create and Delete Post on Dashboard', function () {
 
     });
 
-it.only('Advance Filters', function () {
+it('Advance Filters', function () {
 
 
         // Applying Advance Filters
