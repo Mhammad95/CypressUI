@@ -140,37 +140,48 @@ it('User Explore Remianing Tabs', function () {
 
 
 });
-/*
-it('User Explore Market Tabs', function () {
+
+it('User Profile', function () {
+
+         cy.wait(2000);
+         cy.get('#Layer_hamburger').should("be.visible");
+         cy.get('#Layer_hamburger').click();
+         cy.wait(2000);
+         cy.get('.m-b-10').click();
+         cy.get('.custom--container--sidebar > .card > .card-body').should("be.visible");
+         cy.get('.profileAbout > :nth-child(1)').should("be.visible");
+        cy.wait(4000);
+        cy.get('.menu > ul > :nth-child(2) > a').click();
+        cy.get('.coming_soon_container > h6').should("be.visible");
+         cy.wait(5000);
+         //Connections
+         cy.get('.menu > ul > :nth-child(4) > a').click();
+         cy.get('.flex_container').should("be.visible");
+         //Assets
+         cy.get('.menu--container > .menu > ul > :nth-child(5) > a').click();
+         cy.get('.coming_soon_container > h6').should("be.visible");
+         //Investment
+         cy.get('.menu--container > .menu > ul > :nth-child(6) > a').click();
+         cy.get('.coming_soon_container > h6').should("be.visible");
+         //Accounts
+         cy.get('.menu > ul > :nth-child(7) > a').click();
+         cy.get('.profileAbout > .card-body > :nth-child(1)').should("be.visible");
+
+         //exchanges row
+        // cy.get('.profileAbout > .card-body > :nth-child(2)').scrollIntoView().should("be.visible");
+         //wallet row
+       // cy.get(':nth-child(3) > .accounts_row').scrollIntoView().should("be.visible");
+
+//for social stage
+        // custom
+       // cy.get('.profileAbout > .card-body > :nth-child(6)').scrollIntoView().should("be.visible");
+        // purchased
+       //  cy.get('.profileAbout > .card-body > :nth-child(7)').scrollIntoView().should("be.visible");
+         //Feed
 
 
- });
+      });
 
-it('User Explore Paper Tabs', function () {
-
-
- });
-
-it('User Explore News Tabs', function () {
-
-
-  });
-
-it('User Explore Trends Tabs', function () {
-
-
-  });
-
-it('User Explore Glossary Tabs', function () {
-
-
-    });
-
-it('User Explore Wiki Tabs', function () {
-
-
-  });
-*/
 
 
     });
