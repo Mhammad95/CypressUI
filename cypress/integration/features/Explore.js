@@ -219,9 +219,6 @@ it('Create and Delete Post on Dashboard', function () {
 
  it('Add Widget & Delete Widget', () => {
 
-
-        cy.get('#Layer_hamburger').click();
-        cy.get('#sidebarnav > :nth-child(2) > .router-link-active').click();
         //Widgets cards visibility
         cy.wait(6000);
         cy.get(dashboardLocators.marqueeSlider).should("be.visible")
