@@ -243,7 +243,7 @@ it('Create and Delete Post on Dashboard', function () {
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
         cy.get('.btn--primary').click();
         cy.wait(8000);
-        cy.get('.btn--primary').click();
+        cy.get('.btn btn--primary btn--sm').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
