@@ -217,7 +217,7 @@ it('Create and Delete Post on Dashboard', function () {
     });
 
 
- it only ('Add Widget & Delete Widget', () => {
+ it.only ('Add Widget & Delete Widget', () => {
 
         //Widgets cards visibility
         cy.wait(6000);
