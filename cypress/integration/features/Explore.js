@@ -241,9 +241,10 @@ it('Create and Delete Post on Dashboard', function () {
         cy.get('.gridboxWidgetManager > :nth-child(2)').click();
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
-        cy.get('.btn--primary').should("be.visible");
-        cy.get('.btn--primary').click({ multiple: true });
-        cy.get('.btn--primary').click({ force: true });
+        cy.get('.btn--primary').click();
+        cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
+        cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
+        cy.get('.btn--primary').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
