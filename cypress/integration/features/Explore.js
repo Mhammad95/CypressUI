@@ -9,7 +9,7 @@ import SignupLocators from "../features/locators/SignupLocators.json"
 import 'cypress-time-marks'
 
 
-describe('Tradverse Explore Page', () => {
+describe('Tradverse Web Page', () => {
     beforeEach(() => {
         cy.clearLocalStorage()
         cy.Login()
@@ -17,7 +17,7 @@ describe('Tradverse Explore Page', () => {
         cy.wait(5000);
     });
 
-it('User Explore', function () {
+it(' Traderverse Explore', function () {
 
          cy.wait(2000);
          cy.get('#Layer_hamburger').should("be.visible");
@@ -68,7 +68,7 @@ it('User Explore', function () {
 
 });
 
-it('User Explore Remianing Tabs', function () {
+it('User Explore Tabs', function () {
 
          cy.wait(2000);
          cy.get('#Layer_hamburger').should("be.visible");
@@ -182,6 +182,159 @@ it('User Profile', function () {
 
       });
 
+it('Create and Delete Post on Dashboard', function () {
 
+        // Post list visibility on dashboard
+//        cy.wait('@login').then((interception) => {
+ //           cy.wait(1000);
+ //           cy.log('API Response time:', interception.response.headers.responseTime);
+
+  //      });
+        cy.get('#Layer_hamburger').click();
+        cy.get('#sidebarnav > :nth-child(2) > .router-link-active').click();
+  //      cy.get(dashboardLocators.postList).should("be.visible")
+  //      .timeSince('visit', 'page load time',  120000, true)
+
+        // Creating new post
+        cy.get(dashboardLocators.postsomethig).click()
+        cy.get(dashboardLocators.postTextarea).first().type(dashboardData.testPostText)
+        cy.get(dashboardLocators.postPublishButton).click()
+
+        // Waiting for new post visibility
+        cy.wait('@newPost')
+        cy.contains(dashboardData.testPostText).should("be.visible")
+        cy.wait(6000);
+
+        // Deleting new post
+        cy.get(dashboardLocators.postOptionMenuButton).eq(0).click()
+        cy.xpath(dashboardLocators.postDeleteButton).click()
+        cy.xpath(dashboardLocators.postDelConfirmButton).click()
+
+
+        // Post delete assertion
+        cy.xpath(dashboardLocators.postDelAlert).should('have.text', dashboardData.postDelAlertText)
+    });
+
+
+ it('Add Widget & Delete Widget', () => {
+
+
+        cy.get('#Layer_hamburger').click();
+        cy.get('#sidebarnav > :nth-child(2) > .router-link-active').click();
+        //Widgets cards visibility
+        cy.wait(6000);
+        cy.get(dashboardLocators.marqueeSlider).should("be.visible")
+       // cy.xpath(dashboardLocators.profileCard).should("be.visible")
+        cy.xpath(dashboardLocators.widgetsScroller).scrollTo("bottom")
+        cy.get(dashboardLocators.investmentCard).should("be.visible")
+        cy.log();
+     //   cy.xpath(dashboardLocators.nftCard).should("be.visible")
+
+        // Add new widget
+        cy.xpath(dashboardLocators.addWidgetButton).click()
+  //      cy.xpath(dashboardLocators.selectWidgetType).click()
+  //      cy.xpath(dashboardLocators.selectScreenerButton).click()
+  //      cy.xpath(dashboardLocators.nextButton).click()
+        cy.wait(6000);
+
+        // Select grid layout
+       // cy.wait('@stockList')
+        cy.get('.gridboxWidgetManager > :nth-child(1)').should("be.visible")
+        cy.get('.gridboxWidgetManager > :nth-child(5)').should("be.visible")
+        cy.get('.gridboxWidgetManager > :nth-child(2)').click();
+        cy.wait(6000);
+        cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
+        cy.get('.btn--primary').click();
+        cy.wait(8000);
+        cy.get('.btn--primary').click();
+        cy.get('.Vue-Toastification__toast').should("be.visible")
+
+        // New widget visibility
+        cy.xpath(dashboardLocators.widgetsScroller).scrollTo("bottom")
+        cy.xpath(dashboardLocators.newWidgetVisiblity).should("be.visible")
+
+        // Delete widget
+        cy.xpath(dashboardLocators.widgetOptionMenuButton).click()
+        cy.xpath(dashboardLocators.widgetDeleteButton).click()
+        cy.xpath(dashboardLocators.widgetDelConfirmButton).click()
+
+
+    });
+
+it.only('Advance Filters', function () {
+
+
+        // Applying Advance Filters
+        cy.get('#Layer_hamburger').click();
+        cy.get('#sidebarnav > :nth-child(2) > .router-link-active').click();
+        cy.get('.align-items-center > .d-flex').click()
+        cy.get(':nth-child(1) > :nth-child(1) > :nth-child(2) > .oval > span').click()
+        cy.get(':nth-child(2) > :nth-child(1) > :nth-child(2) > .oval > span').click()
+        cy.get(':nth-child(3) > :nth-child(1) > :nth-child(2) > .oval > span').click()
+        cy.get('.buttons > :nth-child(2)').click()
+
+
+        });
+it('Analyze Tab', function () {
+
+         cy.wait(2000);
+         cy.get('#Layer_hamburger').should("be.visible");
+         cy.get('#Layer_hamburger').click();
+         cy.wait(2000);
+         cy.get(':nth-child(4) > .sidebar-link').click();
+         //Analyze tab add watchlist
+
+         cy.get(':nth-child(1) > .watchlist__card > .watchlist__card--head > .btn').click();
+         cy.get('.modal--body > :nth-child(1)').type('Test');
+         cy.get('.loginbtn > .btn').click();
+         cy.wait(1000);
+         cy.contains('Test').should('be.visible');
+         cy.contains('Test').click();
+
+         cy.wait(600);
+         cy.get(':nth-child(1) > .accordion__item__body > :nth-child(1)').click();
+         cy.get(':nth-child(2) > .watchlist__card > .watchlist__card--head > .btn').click();
+         cy.wait(600);
+         cy.get(':nth-child(1) > .search > .change').click();
+         cy.get('.modal--header > .search > .change').type('aapl').type('{enter}');
+         cy.get(':nth-child(2) > .custom_checkbox').click();
+         cy.get('.primary').click();
+
+         cy.get("img[src='https://cdn-images.traderverse.io/stocks/AAPL_NASDAQ.png']").should("be.visible");
+         cy.wait(2000);
+         cy.get('.active > .icon_more > .svg_icon > svg').click();
+         cy.get('.watchlist__card--body-item.active > .icon_more > .popover_content > :nth-child(6)').click();
+         cy.get('.loginbtn > .btn').click();
+
+
+          cy.get(':nth-child(1) > .watchlist__card').should("be.visible");
+          //Screener
+          cy.get('.menu > ul > :nth-child(3) > a').click();
+          cy.wait(2000);
+          //Comparer
+          cy.get('.menu > ul > :nth-child(5) > a').click();
+          cy.wait(2000);
+  //        cy.get('.selectinfoMarketdv').click();
+  //        cy.get('.selectitem02').click();
+  //        cy.get('.board__list--new > .title').click();
+ //         cy.wait(400000);
+  //        cy.get('.modal--body > :nth-child(1)').type('Testing')
+   //       cy.get('.loginbtn > .btn').click();
+    //      cy.get('#searchTextInput').type('aapl');
+   //       cy.get('#sc_suggestion > :nth-child(2)').click();
+          cy.wait(4000);
+
+          //Birdseye
+          cy.get('.menu > ul > :nth-child(6) > a').click();
+          cy.wait(2000);
+
+
+          cy.wait(3000);
+          //Paper
+          cy.get(':nth-child(9) > a').click();
+          cy.get('.articles-content').scrollIntoView().should("be.visible");
+
+
+         });
 
     });

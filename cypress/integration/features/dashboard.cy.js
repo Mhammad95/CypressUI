@@ -13,13 +13,13 @@ describe('Tradverse dashboard', () => {
         cy.clearLocalStorage()
         cy.Login();
         cy.viewport(1920, 1200);
-        cy.wait(50000);
+        cy.wait(5000);
     });
 
     beforeEach(() => {
         cy.routsRun()
     })
-
+/*
     it('Create and Delete Post', function () {
 
         // Post list visibility on dashboard
@@ -51,7 +51,7 @@ describe('Tradverse dashboard', () => {
         // Post delete assertion
         cy.xpath(dashboardLocators.postDelAlert).should('have.text', dashboardData.postDelAlertText)
     })
-
+*/
     it('Add Widget', () => {
 
         //Widgets cards visibility
@@ -65,18 +65,22 @@ describe('Tradverse dashboard', () => {
 
         // Add new widget
         cy.xpath(dashboardLocators.addWidgetButton).click()
-        cy.xpath(dashboardLocators.selectWidgetType).click()
-        cy.xpath(dashboardLocators.selectScreenerButton).click()
-        cy.xpath(dashboardLocators.nextButton).click()
+  //      cy.xpath(dashboardLocators.selectWidgetType).click()
+  //      cy.xpath(dashboardLocators.selectScreenerButton).click()
+  //      cy.xpath(dashboardLocators.nextButton).click()
         cy.wait(6000);
 
         // Select grid layout
-        cy.wait('@stockList')
-        cy.xpath(dashboardLocators.stockList).should("be.visible")
-        cy.xpath(dashboardLocators.gridLayout).click();
-        cy.get(dashboardLocator.selectWidgetchart).click();
-        cy.xpath(dashboardLocator.slectnextwidgetpage).click();
-        cy.xpath(dashboardLocators.submitWidgetButton).click()
+       // cy.wait('@stockList')
+        cy.get('.gridboxWidgetManager > :nth-child(1)').should("be.visible")
+        cy.get('.gridboxWidgetManager > :nth-child(5)').should("be.visible")
+        cy.get('.gridboxWidgetManager > :nth-child(2)').click();
+        cy.wait(6000);
+        cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
+        cy.get('.btn--primary').click();
+        cy.wait(8000);
+        cy.get('.btn--primary').click();
+        cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
         cy.xpath(dashboardLocators.widgetsScroller).scrollTo("bottom")

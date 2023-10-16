@@ -18,7 +18,7 @@
 
     "addWidgetButton": "(//div[@class='sort_filter_icon'])[1]",
     "selectWidgetType": ".gridboxWidgetManager > :nth-child(2)",
-    "selectWidgetchart": "(//div)[11]",
+    "selectWidgetchart": "(':nth-child(3) > .active')",
     "slectnextwidgetpage": "(//button[normalize-space()='Next'])[1]",
     "selectScreenerButton": "(//div[@class='widget--tile'])[1]",
     "selectedWidget": "//div[@class='widget--tile active']//p",

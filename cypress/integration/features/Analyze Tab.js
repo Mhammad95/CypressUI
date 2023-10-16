@@ -26,7 +26,7 @@ it('User Analyze', function () {
          cy.get(':nth-child(4) > .sidebar-link').click();
          //Analyze tab add watchlist
 
-        /* cy.get(':nth-child(1) > .watchlist__card > .watchlist__card--head > .btn').click();
+         cy.get(':nth-child(1) > .watchlist__card > .watchlist__card--head > .btn').click();
          cy.get('.modal--body > :nth-child(1)').type('Test');
          cy.get('.loginbtn > .btn').click();
          cy.wait(1000);
@@ -48,7 +48,7 @@ it('User Analyze', function () {
          cy.get('.watchlist__card--body-item.active > .icon_more > .popover_content > :nth-child(6)').click();
          cy.get('.loginbtn > .btn').click();
 
-*/
+
 
           cy.get(':nth-child(1) > .watchlist__card').should("be.visible");
           //Screener
