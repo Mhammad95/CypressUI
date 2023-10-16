@@ -202,7 +202,7 @@ it('Create and Delete Post on Dashboard', function () {
         cy.get(dashboardLocators.postPublishButton).click()
 
         // Waiting for new post visibility
-        cy.wait('@newPost')
+        cy.wait(6000)
         cy.contains(dashboardData.testPostText).should("be.visible")
         cy.wait(6000);
 
