@@ -242,10 +242,10 @@ it('Create and Delete Post on Dashboard', function () {
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
       //  cy.get('div.hoverEffectDv').trigger('mouseover');
-        cy.contains('.btn--primary', 'Next').click();
+        cy.contains('.btn btn--primary btn--sm', 'Next').click();
         cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
         cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
-        cy.contains('.btn--primary', 'Submit').click();
+        cy.contains('.btn btn--primary btn--sm', 'Submit').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
