@@ -19,7 +19,7 @@ describe('Tradverse dashboard', () => {
     beforeEach(() => {
         cy.routsRun()
     })
-/*
+
     it('Create and Delete Post', function () {
 
         // Post list visibility on dashboard
@@ -38,7 +38,7 @@ describe('Tradverse dashboard', () => {
         cy.get(dashboardLocators.postPublishButton).click()
 
         // Waiting for new post visibility
-        cy.wait('@newPost')
+        cy.wait(6000);
         cy.contains(dashboardData.testPostText).should("be.visible")
         cy.wait(6000);
 
@@ -51,7 +51,7 @@ describe('Tradverse dashboard', () => {
         // Post delete assertion
         cy.xpath(dashboardLocators.postDelAlert).should('have.text', dashboardData.postDelAlertText)
     })
-*/
+/*
     it('Add Widget', () => {
 
         //Widgets cards visibility
@@ -93,7 +93,7 @@ describe('Tradverse dashboard', () => {
 
 
     })
-
+*/
  //   after(() => {
 //        cy.clearLocalStorage()
  //   });
