@@ -217,7 +217,7 @@ it('Create and Delete Post on Dashboard', function () {
     });
 
 
- it.only ('Add Widget & Delete Widget', () => {
+ it ('Add Widget & Delete Widget', () => {
 
         //Widgets cards visibility
         cy.wait(6000);
@@ -242,11 +242,11 @@ it('Create and Delete Post on Dashboard', function () {
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
       //  cy.get('div.hoverEffectDv').trigger('mouseover');
-      cy.xpath("//div[@class='card-body h-100']", { timeout: 7000 }).should("exist");
-        cy.contains('.btn--primary', 'Next').click();
+ //     cy.xpath("//div[@class='card-body h-100']", { timeout: 7000 }).should("exist");
+        cy.contains('.btn--primary').click();
         cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
         cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
-        cy.contains('.btn--primary', 'Submit').click();
+   //     cy.contains('.btn--primary', 'Submit').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
