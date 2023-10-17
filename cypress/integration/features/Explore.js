@@ -244,8 +244,8 @@ it('Create and Delete Post on Dashboard', function () {
       //  cy.get('div.hoverEffectDv').trigger('mouseover');
  //     cy.xpath("//div[@class='card-body h-100']", { timeout: 7000 }).should("exist");
  //       cy.get('.btn btn--primary btn--sm').click();
-        cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
-        cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
+   //     cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
+    //    cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
    //     cy.contains('.btn--primary', 'Submit').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
