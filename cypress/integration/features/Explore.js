@@ -340,8 +340,7 @@ it('Analyze Tab', function () {
 
 it('SignUp', function () {
 
-     cy.get('#hc_settings > .router-link-active > .svg_icon > svg').click();
-     cy.get('ms_logout').click();
+     cy.visit('https://social-dev.traderverse.io/login');
      cy.get(SignupLocators.Signupbutton).click();
      cy.wait(1000);
 
