@@ -51,7 +51,8 @@ module.exports = defineConfig({
           "reportDir": "cypress/reports/merged",
           "overwrite": true,
           "html": true,
-          "json": true
+          "json": true,
+          "screenshots": "cypress/screenshots"
   //  reportDir: 'cypress/reports', // Specify the directory where reports will be saved
   //  overwrite: false, // Set to true to overwrite previous reports
   //  html: true, // Set to true to generate an HTML report
