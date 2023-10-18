@@ -15,13 +15,22 @@ const username = `johndoe${randomNumber}`;
 const useremail = `johndoe${randomNumber}@yopmail.com`;
 
 describe('Tradverse Signup', () => {
-
+    beforeEach(() => {
+        cy.clearLocalStorage()
+        cy.Login()
+        cy.viewport(1920, 1200);
+        cy.wait(5000);
+    });
 
 it.only('SignUp', function () {
 
-    cy.visit('https://social-dev.traderverse.io/login');
-     cy.get(SignupLocators.Signupbutton).click();
+    //cy.visit('https://social-dev.traderverse.io/login');
+     //cy.get(SignupLocators.Signupbutton).click();
+     cy.get('#hc_settings > .router-link-active > .svg_icon > svg').click();
+     cy.get('#ms_logout').click();
+     cy.visit('https://social-dev.traderverse.io/register');
      cy.wait(1000);
+
 
     // Fill out the registration form
     cy.url().should('include', '/register');

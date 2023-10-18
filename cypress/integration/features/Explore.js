@@ -246,6 +246,8 @@ it('Create and Delete Post on Dashboard', function () {
         cy.get('.gridboxWidgetManager > :nth-child(2)').click();
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
+        cy.get('.btn.btn--primary.btn--sm').click();
+        cy.get('#searchTextInput').click().type('msft');
       //  cy.get('div.hoverEffectDv').trigger('mouseover');
  //     cy.xpath("//div[@class='card-body h-100']", { timeout: 7000 }).should("exist");
  //       cy.get('.btn btn--primary btn--sm').click();
@@ -345,6 +347,8 @@ it('Analyze Tab', function () {
 
 it('SignUp', function () {
 
+     cy.get('#hc_settings > .router-link-active > .svg_icon > svg').click();
+     cy.get('#ms_logout').click();
      cy.visit('https://social-dev.traderverse.io/register');
      cy.wait(1000);
 
