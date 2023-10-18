@@ -9,6 +9,11 @@ import SignupLocators from "../features/locators/SignupLocators.json"
 import dashboardData from "../features/fixtures/dashboardData.json"
 import 'cypress-time-marks'
 
+// Generate a random number between 1000 and 9999
+const randomNumber = Math.floor(Math.random() * 9000) + 1000;
+// Create the username with the random number
+const username = `johndoe${randomNumber}`;
+const useremail = `johndoe${randomNumber}@yopmail.com`;
 
 describe('Tradverse Web Page', () => {
     beforeEach(() => {
