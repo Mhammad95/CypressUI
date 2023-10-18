@@ -337,4 +337,39 @@ it('Analyze Tab', function () {
 
          });
 
+
+it('SignUp', function () {
+
+     cy.get(SignupLocators.Signupbutton).click();
+     cy.wait(1000);
+
+    // Fill out the registration form
+    cy.url().should('include', '/register');
+    cy.get(SignupLocators.Fullname).type(SignupData.Fullname);
+    cy.get(SignupLocators.Username).type(username);
+    cy.get(SignupLocators.userEmail).type(useremail);
+    cy.get(SignupLocators.password).type(SignupData.password);
+    cy.get(SignupLocators.Checkbox).click();
+
+
+    // Click the registration button
+    cy.get(SignupLocators.btnLogin).click();
+    cy.url().should('include', '/login');
+
+    //Login check with new user with verification
+    cy.wait(1000);
+        cy.get(loginLocators.userEmail).type(useremail);
+        cy.get(loginLocators.password).type(SignupData.password)
+        cy.get(loginLocators.btnLogin).click({ force: true }).timeMark('visit')
+        cy.url().should('include', '/locked');
+
+
+
+    //route to yopmail for verification
+   // cy.visit('https://yopmail.com/');
+   // cy.get('.ycptinput').type('test@yopmail.com').type('{enter}');
+
+
+  });
+
     });
