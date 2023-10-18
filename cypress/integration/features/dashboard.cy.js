@@ -77,10 +77,15 @@ describe('Tradverse dashboard', () => {
         cy.get('.gridboxWidgetManager > :nth-child(2)').click();
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
-        cy.get('.btn--primary').click();
-        cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
-        cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
-        cy.get('.btn--primary').click();
+    //    cy.get('.btn--primary').click();
+    //    cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
+    //    cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
+    //    cy.get('.btn--primary').click();
+            cy.get('.btn.btn--primary.btn--sm').click();
+            cy.get('#searchTextInput').click().type('msft').type('{enter}');
+            cy.wait(3000);
+            cy.get('.suggestions > :nth-child(1)').click();
+            cy.get('.btn.btn--primary.btn--sm').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
@@ -91,6 +96,7 @@ describe('Tradverse dashboard', () => {
         cy.xpath(dashboardLocators.widgetOptionMenuButton).click()
         cy.xpath(dashboardLocators.widgetDeleteButton).click()
         cy.xpath(dashboardLocators.widgetDelConfirmButton).click()
+        cy.get('.Vue-Toastification__toast').should("be.visible")
 
 
     })

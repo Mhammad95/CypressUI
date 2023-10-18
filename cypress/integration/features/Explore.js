@@ -246,14 +246,11 @@ it('Create and Delete Post on Dashboard', function () {
         cy.get('.gridboxWidgetManager > :nth-child(2)').click();
         cy.wait(6000);
         cy.get('.modal--body > :nth-child(3) > :nth-child(1)').click();
-        cy.get('.btn.btn--primary.btn--sm').click();
-        cy.get('#searchTextInput').click().type('msft');
-      //  cy.get('div.hoverEffectDv').trigger('mouseover');
- //     cy.xpath("//div[@class='card-body h-100']", { timeout: 7000 }).should("exist");
- //       cy.get('.btn btn--primary btn--sm').click();
-   //     cy.get(':nth-child(3) > :nth-child(2) > .image_wrapper').click();
-    //    cy.get(':nth-child(7) > :nth-child(2) > .image_wrapper').click();
-   //     cy.contains('.btn--primary', 'Submit').click();
+            cy.get('.btn.btn--primary.btn--sm').click();
+            cy.get('#searchTextInput').click().type('msft').type('{enter}');
+            cy.wait(3000);
+            cy.get('.suggestions > :nth-child(1)').click();
+            cy.get('.btn.btn--primary.btn--sm').click();
         cy.get('.Vue-Toastification__toast').should("be.visible")
 
         // New widget visibility
@@ -264,6 +261,7 @@ it('Create and Delete Post on Dashboard', function () {
         cy.xpath(dashboardLocators.widgetOptionMenuButton).click()
         cy.xpath(dashboardLocators.widgetDeleteButton).click()
         cy.xpath(dashboardLocators.widgetDelConfirmButton).click()
+        cy.get('.Vue-Toastification__toast').should("be.visible")
 
 
     });
