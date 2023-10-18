@@ -346,7 +346,6 @@ it('Analyze Tab', function () {
 it('SignUp', function () {
 
      cy.visit('https://social-dev.traderverse.io/register');
-     cy.get(SignupLocators.Signupbutton).click();
      cy.wait(1000);
 
     // Fill out the registration form
