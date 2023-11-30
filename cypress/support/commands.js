@@ -2,15 +2,17 @@ import loginLocators from "../integration/features/locators/loginLocators.json"
 import loginData from "../integration/features/fixtures/loginData.json"
 import "./index.js"
 import 'cypress-time-marks'
+import "../support/commands.js"
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // Prevent Cypress from failing the test due to uncaught exceptions
   return false;
 });
 
+
 Cypress.Commands.add('Login', () => {
 
-    cy.visit('https://social-dev.traderverse.io/login')
+    cy.visit("https://social-dev.traderverse.io/login")
     cy.get(loginLocators.userEmail).type(loginData.useremail)
     cy.get(loginLocators.password).type(loginData.password)
     cy.get(loginLocators.btnLogin).click({ force: true }).timeMark('visit')

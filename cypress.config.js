@@ -38,8 +38,8 @@ module.exports = defineConfig({
     // setupNodeEvents(on, config) {
     //     return require('.cypress/plugins/index.js')(on, config)
     // },
-    baseUrl: "https://social-dev.traderverse.io/login",
-
+    baseUrl: "http://74.208.95.190:9080/signin",
+//https://social-dev.traderverse.io/login
     specPattern: "cypress/integration/features/*.cy.{js,jsx,ts,tsx}",
     supportFile: 'cypress/support/commands.js',
     testIsolation: false,
